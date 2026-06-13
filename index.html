@@ -1,0 +1,118 @@
+<!DOCTYPE html> <!--declaration defines that this document is an HTML5 document-->
+<html> <!--root element of an HTML page-->
+    <head> <!--head element contains meta information and links to external resources-->
+        <!--Title at the tab bar-->
+        <title> Iqraa Wahid's Portfolio</title>
+        
+        <!--link means linking this HTML file with another source-->
+        <!--rel defines the relationship between the current document and the linked resource-->
+        <!--stylesheet consists of the layout, font, colors, etc of the webpage-->
+        <!--href means the location of the linked resource-->
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script> <!--linking the JavaScript file to the HTML file so that the functions in the JavaScript file can be used in this HTML file-->
+    </head>
+
+    <body>
+        <!--Page content goes here-->
+
+        <!--div is a container element used to group together other elements and apply styles to them-->
+        <div class="background">
+            <!--empty spans are ceated so they can later be used in the CSS file for the background effect-->
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav> <!--navigation bar which contains links to different sections of the portfoilio-->
+            <h2> Iqraa Wahid </h2> <!--heading element displaying my name-->
+            <div>
+                <!-- different sections of the portfolio links-->
+                <!--<a> is used to create hyperlinks-->
+                <!--href defines the URL to which the hyperlink points to-->
+                <a href="#home">Home</a> 
+                <a href="#about">About Me!</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <!--section element defines a section in the document-->
+        <!--id is used to identify the section-->
+        <!--class is used for styling that section using the CSS file-->
+        <section id="home" class="home">
+            <h1>Hello, I'm Iqraa Wahid!</h1> <!--heading element introducing myself-->
+            <p>Computer Engineering Student | Future Software Engineer</p>
+            <button onclick="zoomToSection('projects')">View Projects</button> <!--button that when clicked, will zoom to the projects section using a JavaScript function-->
+            <button onclick="zoomToSection('resume')">View Resume</button> <!--button that when clicked, will zoom to the resume section using a JavaScript function-->
+        </section>
+
+        <section id="skills" class="section">
+            <h1>Skills</h1> <!--heading element for the skills section-->
+            
+            <div class="skills">
+                <!-- Each skill is represented by a div with the class "skill" so they can all be styled together -->
+                <!--<div is declared each time a new skill is added, because each skill is a separate object, anything applied to the 'skill' class individually occurs in each object-->
+                <div class="skill">Java</div>
+                <div class="skill">C</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">VHDL</div>
+                <div class="skill">Object-Oriented Programming</div>
+                <div class="skill">Data Structures & Algorithms</div>
+                <div class="skill">Software Testing & Debugging</div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h1>Projects</h1> <!--heading element for the projects section-->
+            
+            <div class="project">
+                <h2>Shape Memory Game</h2>
+                <p>Java GUI game using shape images and answer validation.</p>
+                <a href="shape-memory-game.html">View Project</a>
+            </div>
+
+            <div class="project">
+                <h2>Portfolio Website</h2>
+                <p>Developed a responsive personal portfolio website using HTML, CSS, and JavaScript, featuring animations, smooth scrolling, and interactive sections to showcase skills, projects, and resume.</p>
+                <a href="my-portfolio.html">View Project</a>
+            </div>
+
+            <div class="project">
+                <h2>Java Restaurant Ordering System</h2>
+                <p>Designed and implemented a Java-based restaurant ordering system with a graphical user interface (GUI) that allows users to browse the menu, place orders, and manage inventory.</p>
+                <a href="java-restaurant-ordering-system.html">View Project</a>
+            </div>
+
+            <div class="project">
+                <h2>Academic Projects</h2>
+                <p>Various academic projects completed during my studies in Computer Engineering (in progress).</p>
+                <a href="academic-projects.html">View Projects</a>
+            </div>
+            
+            <!--more projects can be added here in the same format as above, just copy and paste the div with class "project" and change the content accordingly-->
+
+        </section>
+
+        <section id="resume" class="section">
+            <h1>Resume</h1>
+            <p>Download my resume to learn more about my education, experience, and skills.</p>
+            
+            <!--With target="_blank" -> Clicking the button: Opens the PDF in a brand-new tab. Current page stays open.-->
+            <a class="resume-btn" href="files/Iqraa_Wahid_Resume.pdf" target="_blank">Open Resume</a>
+        </section>
+
+        <section id="contact" class="section">
+            <h1>Contact Me</h1>
+            <p>Feel free to contact me via email or reach me through my social media profiles.</p>
+            <p class="contactMe">Email: iqraa.wahid172@gmail.com</p>
+            <p class="contactMe">LinkedIn: <a href="http://linkedin.com/in/iqraa-wahid-6119603a5" target="_blank">My LinkedIn </a></p>
+            <p class="contactMe">GitHub: <a href="https://github.com/IqraaWahid" target="_blank">My GitHub</a></p>
+        </section>
+        <script src="script.js"></script> <!--linking the JavaScript file to the HTML file so that the functions in the JavaScript file can be used in this HTML file-->
+    </body>
+</html>
