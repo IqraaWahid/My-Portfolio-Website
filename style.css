@@ -54,6 +54,53 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+/*typing animation*/
+.typing-text {
+    width:0; /*initial width of the text is 0, meaning it will be hidden at the start of the animation*/
+    overflow: hidden; /*hides the overflowing text when the width is 0*/
+    white-space: nowrap; /*prevents the text from wrapping to the next line --> keeps text on one line*/
+    border-right: 3px solid white; /*creates a blinking cursor effect by adding a border to the right of the text*/
+    
+    animation: /*running two animations at the same time*/
+    /*first animation: using the animation named typing*/
+    typing 5s steps(22, end) infinite, /*typing animation that takes 5 seconds and uses steps (22 characters each step) to create a typewriter effect, with the "forwards" property to keep the final state of the animation*/
+    
+    /*second animation: use the animation named blink*/
+    blink 0.8s infinite; /*blinking animation for the cursor, making it blink every 0.8 seconds and repeats infinitely*/
+}
+
+/*  "@keyframes typing" <-- means I am creating an animation called typing, inside it you tell CSS what should happen during the animation
+    Animation named: typing
+    Reveals the text
+*/
+@keyframes typing{
+   0% { /*at 0s*/
+    width: 0;
+   }
+
+   50%{ /*at 2.5s*/
+    width: 58%
+   }
+
+   80%{ /*at 80% of 5s*/
+    width: 58% /*played around to get 58% which shows the full text I want, and cursor position I liked with  no additional blank spaces*/
+   }
+
+   100%{ /*at 5s*/
+    width: 0%;
+   }
+}
+
+/*  Animation named: blink
+    half-way through the blink animation, make the cursor invisible
+*/
+@keyframes blink{
+    50% {
+        border-color: transparent;
+    }
+}
+
+
 .home p {
     font-size: 22px;
     margin-bottom: 30px;
@@ -85,6 +132,10 @@ button:hover, .resume-btn:hover {
 .section h1 {
     font-size: 45px;
     margin-bottom: 40px;
+}
+
+.section p {
+    margin-bottom: 35px;
 }
 
 .skills {

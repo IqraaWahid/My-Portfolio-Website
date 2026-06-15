@@ -31,7 +31,7 @@
                 <!--<a> is used to create hyperlinks-->
                 <!--href defines the URL to which the hyperlink points to-->
                 <a href="#home">Home</a> 
-                <a href="#about">About Me!</a>
+                <a href="#aboutme">About Me</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#resume">Resume</a>
@@ -43,7 +43,9 @@
         <!--id is used to identify the section-->
         <!--class is used for styling that section using the CSS file-->
         <section id="home" class="home">
-            <h1>Hello, I'm Iqraa Wahid!</h1> <!--heading element introducing myself-->
+            <!--typing style-->
+            <!--<h1>Hello, I'm Iqraa Wahid!</h1> --heading element introducing myself-->
+            <h1 class="typing-text">Hello, I'm Iqraa Wahid!</h1> <!--heading element introducing myself with a typing effect using the "typing-text" class for styling in the CSS file-->
             <p>Computer Engineering Student | Future Software Engineer</p>
             <button onclick="zoomToSection('projects')">View Projects</button> <!--button that when clicked, will zoom to the projects section using a JavaScript function-->
             <button onclick="zoomToSection('resume')">View Resume</button> <!--button that when clicked, will zoom to the resume section using a JavaScript function-->
@@ -113,6 +115,14 @@
             <p class="contactMe">LinkedIn: <a href="http://linkedin.com/in/iqraa-wahid-6119603a5" target="_blank">My LinkedIn </a></p>
             <p class="contactMe">GitHub: <a href="https://github.com/IqraaWahid" target="_blank">My GitHub</a></p>
         </section>
+
+        <!--working on this-->
+        <section id="aboutme" class = "section">
+            <h1>About Me</h1>
+            <p>Hello! I'm Iqraa Wahid, a passionate Computer Engineering student with a strong foundation in programming and problem-solving. I enjoy working on challenging projects and continuously learning new technologies.</p>
+            
+        </section>
+
         <script src="script.js"></script> <!--linking the JavaScript file to the HTML file so that the functions in the JavaScript file can be used in this HTML file-->
     </body>
 </html>
