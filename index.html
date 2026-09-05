@@ -47,8 +47,25 @@
             <!--<h1>Hello, I'm Iqraa Wahid!</h1> --heading element introducing myself-->
             <h1 class="typing-text">Hello, I'm Iqraa Wahid!</h1> <!--heading element introducing myself with a typing effect using the "typing-text" class for styling in the CSS file-->
             <p>Computer Engineering Student | Future Software Engineer</p>
-            <button onclick="zoomToSection('projects')">View Projects</button> <!--button that when clicked, will zoom to the projects section using a JavaScript function-->
-            <button onclick="zoomToSection('resume')">View Resume</button> <!--button that when clicked, will zoom to the resume section using a JavaScript function-->
+            
+            <!--Home Quote-->
+            <!--<span> = small part inside a line
+                <div> = container/box for multiple things
+            -->
+            <div class="home-quote">
+                <!--<span> allows you to target a small piece of inline content - usually text - so you can style it separately with CSS-->
+                <span class="quote-mark">"</span>
+                <p>
+                    The beauty of technology is that an idea doesn't have to stay an idea- <span class = "quote-highlight">you can build it yourself.</span>
+                </p>
+                
+                <span class="quote-author"> - Iqraa Wahid</span>
+            </div>
+
+            <div class="home-buttons">
+                <button onclick="zoomToSection('projects')">View Projects</button> <!--button that when clicked, will zoom to the projects section using a JavaScript function-->
+                <button onclick="zoomToSection('resume')">View Resume</button> <!--button that when clicked, will zoom to the resume section using a JavaScript function-->
+            </div>
         </section>
 
         <section id="skills" class="section">
@@ -102,7 +119,7 @@
 
         <section id="resume" class="section">
             <h1>Resume</h1>
-            <p>Download my resume to learn more about my education, experience, and skills.</p>
+            <p>Download my resume to learn more about my education, experience, and skills. <br> <br> <br></p>
             
             <!--With target="_blank" -> Clicking the button: Opens the PDF in a brand-new tab. Current page stays open.-->
             <a class="resume-btn" href="files/Iqraa_Wahid_Resume.pdf" target="_blank">Open Resume</a>
@@ -116,11 +133,51 @@
             <p class="contactMe">GitHub: <a href="https://github.com/IqraaWahid" target="_blank">My GitHub</a></p>
         </section>
 
-        <!--working on this-->
+        <!--about me section-->
         <section id="aboutme" class = "section">
             <h1>About Me</h1>
-            <p>Hello! I'm Iqraa Wahid, a passionate Computer Engineering student with a strong foundation in programming and problem-solving. I enjoy working on challenging projects and continuously learning new technologies.</p>
             
+            <div class="about-cards">
+
+                <!--Who am I card-->
+                <div class="about-card">
+                    <img src = "images/about-me.jpg" alt="About Me"> <!--image element (img tells HTML that an image will be added) displaying a picture of myself with the source (where the image is located) and alternative text specified (if image doesn't load)-->
+                    
+                    <div class="about-card-content">
+                        <h2>WHO AM I?</h2>
+
+                        <p>
+                            I'm a third-year Computer Engineering student in the Software Engineering stream at Toronto Metropolitan University. I enjoy learning, creating and challenging myself-whether that's through technology, academics, or trying something new. 
+                        </p>
+                    </div>
+                </div>
+
+                <!--Beyond tech card-->
+                <div class = "about-card">
+                    <img src = "images/sports.jpg" alt="Sports and Hobbies">
+                    
+                    <div class = "about-card-content">
+                        <h2>BEYOND TECH</h2>
+
+                        <p>
+                            Outside of tech, I love staying active through running, volleyball, and basketball. I also competed in high jump back in 2018, placing 1st at Areas and 3rd at Regionals. I also love travelling, exploring new places, and making new memories.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Why I love tech card-->
+                <div class = "about-card">
+                    <img src = "images/tech.jpg" alt="Technology">
+                    <div class = "about-card-content">
+                        <h2>WHY I LOVE TECH</h2>
+
+                        <p>
+                            What I love most about technology is the freedom to create something completely from scratch. Being able to turn an idea into my own website, application, or project is incredibly rewarding. To me, technology is also a skill that creates independence—the ability to build, create, and solve problems on your own rather than always relying on others. In a world where technology is part of almost everything we do, I believe these skills are becoming more than just an advantage; they're becoming a necessity. 
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <script src="script.js"></script> <!--linking the JavaScript file to the HTML file so that the functions in the JavaScript file can be used in this HTML file-->
