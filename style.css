@@ -373,7 +373,86 @@ body {
 }
 
 /* HOME PAGE QUOTE */
+.home-quote {
+    position: relative; /*position relative to the parent container*/
 
+    max-width: 650px; /*maximum width of the quote container*/
+    margin: 35px auto 40px auto; /*top margin of 35px, bottom margin of 40px, and horizontal margins set to auto to center the quote container*/
+    padding: 20px 35px;/*padding of 20px on top and bottom, and 35px on left and right*/
+    border-radius: 15px; /*curvature of the padding*/
 
+    text-align: center; /*centers the text inside the quote container*/
+    
+    background: rgba(255, 255, 255, 0.06); /*first three numbers changes the colour, and last number changes opacity of the colour*/
+    backdrop-filter: blur(8px); /*blurs the background behind the quote*/
+
+    border-left: 3px solid white; /*adds a left border to the quote container, with a width of 3px and a white color*/
+
+    /* Smooth hover transition */
+    transition: background 0.3s ease; /*transition effect for the background of the quote container, with a duration of 0.3 seconds and an easing function of "ease"*/
+
+    /*Animation on page load*/
+    animation: fadeIn 1.2s ease forwards; /*animation named fadeIn, with a duration of 1.2 seconds, easing function of "ease", and the "forwards" property to keep the final state of the animation*/
+    animation-delay: 0.8s; /*delay of 0.8 seconds before the animation starts*/
+    opacity: 0; /*initial opacity of the quote container is set to 0, making it invisible at the start of the animation*/
+
+}
+
+/* Quote text */
+.home-quote p {
+    font-size: 20px; /*size of the text in the quote container*/
+    line-height: 1.5; /*distance between lines of text in the quote container*/
+    font-style: italic; /*italicizes the text in the quote container*/
+    letter-spacing: 0.3px; /*spacing between characters in the quote container*/
+    font-family: Georgia, serif;
+    margin: 0; /*removes default margin from the paragraph element in the quote container*/
+}
+
+/*large decorative quotation mark before the quote text*/
+.quote-mark {
+    position: absolute; /*positoned relative to the quote container*/
+    top:-10px;
+    left: 0px;
+
+    font-size: 85px; /*size of the quotation mark*/
+    font-style: italic; /*italicizes the quotation mark*/
+    font-family: Georgia, serif; /*font family of the quotation mark*/
+    opacity: 0.25;
+}
+
+/*emphasis on the important part of the quote - that is the action part of the quote*/
+.quote-highlight {
+    font-weight: 600; /*makes the text bold*/
+}
+
+/*author of the quote*/
+.quote-author {
+    display: block; /*displayed as a block element, meaning it will take up the full width of its parent container and start on a new line*/
+    
+    margin-top: 12px; /*top margin of 15px for the author text*/
+    font-size: 14px; /*size of the author text*/
+    font-style: normal;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    opacity: 0.7; /*makes the author text slightly transparent*/
+}
+
+/*Hover effect for the quote container*/
+.home-quote:hover {
+    background: rgba(255, 255, 255, 0.1); /*changes the background color of the quote container to a slightly lighter shade when hovered over*/   
+}
+
+/*Quote container animation on page load*/
+@keyframes fadeIn {
+    0% { /*at the start of the animation, the quote container is fully transparent and moved down by 20px*/
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% { /*at the end of the animation, the quote container is fully opaque and in its original position*/
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* ABOUT ME SECTION */
