@@ -173,6 +173,7 @@ button:hover, .resume-btn:hover {
 .project a,
 #contact a {
     color: pink;
+    display: block; /*displayed as a block element, meaning it will take up the full width of its parent container and start on a new line*/
 }
 
 /* did myself: */
